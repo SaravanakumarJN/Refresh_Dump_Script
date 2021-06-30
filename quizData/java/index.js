@@ -1,0 +1,9 @@
+let freeTimeLearning = require("./freeTimeLearning.json").questions;
+const sanfoundry = require("./sanfoundry.json").questions;
+
+freeTimeLearning = freeTimeLearning.map((question) => ({
+  ...question,
+  source: "https://www.freetimelearning.com",
+}));
+
+module.exports = freeTimeLearning.concat(sanfoundry);
