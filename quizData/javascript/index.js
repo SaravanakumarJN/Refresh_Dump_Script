@@ -19,18 +19,14 @@ function addSource(source, data) {
   });
 }
 
-ydkjs = addSource("https://github.com/austintackaberry/ydkjs-exercises", ydkjs);
 freeTimeLearning = addSource(
   "https://www.freetimelearning.com",
   freeTimeLearning
 );
+ydkjs = addSource("https://github.com/austintackaberry/ydkjs-exercises", ydkjs);
 lyndiahallie = addSource(
   "https://github.com/lydiahallie/javascript-questions",
   lyndiahallie
 );
 
-const masterData = (module.exports = lyndiahallie.concat(
-  ydkjs,
-  freeTimeLearning,
-  sanfoundry
-));
+module.exports = freeTimeLearning.concat(sanfoundry, ydkjs, lyndiahallie);
